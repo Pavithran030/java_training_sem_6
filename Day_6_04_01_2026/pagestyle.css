@@ -1,0 +1,38 @@
+.page{
+            margin: 30px;
+            /* position:sticky; */
+            background-color: rgb(26, 164, 26);
+            /* border-color: green; */
+            border-radius: 10px;
+            border-width: 5%;
+            border: 5px solid rgb(224, 73, 73);
+            /* border-color: rgb(9, 17, 17); */
+        }
+        #para{
+            font-family:Georgia;
+            padding-inline-start: 30px;
+            padding: 20px 20px 20px 20px;
+            margin: 0 auto;
+
+            line-height: 1.5;
+            margin-bottom: 20px;
+            font-size: 1rem;
+            text-align: justify;
+        }
+        .header-img {
+            width: 50%;            
+            height: auto;           /* Changed to auto to maintain aspect ratio */
+            display: block;         /* Must be block for margin: auto to work */
+            margin: 20px auto;      /* 20px space top/bottom, 'auto' centers it horizontally */
+            border: 3px solid #b1ca0bde; 
+            border-radius: 15px;
+        }
+
+        .header-img {
+            width: 50%;            
+            height: 50%;            /* Keeps image from looking stretched */
+            display: flex;
+            justify-content: center;
+            border: 3px solid #b1ca0bde;
+            border-radius: 15px;
+        }
