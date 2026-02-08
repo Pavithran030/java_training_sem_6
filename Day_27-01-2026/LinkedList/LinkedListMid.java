@@ -1,4 +1,7 @@
+// package LinkedList;
+// package Linkedlist;
 
+// No imports needed - classes are defined in this file
 class Node {
 
     int data;

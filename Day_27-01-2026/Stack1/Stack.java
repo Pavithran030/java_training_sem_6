@@ -1,3 +1,4 @@
+package Stack1;
 
 class StackNode {
 
@@ -15,6 +16,7 @@ class StackCreation {
     StackNode top;
     int count = 0;
 
+    // Creation
     void push(int data) {
         StackNode node = new StackNode(data);
         node.next = top;
@@ -22,6 +24,7 @@ class StackCreation {
 
     }
 
+    // Remove the top element from the Stack
     void pop() {
         StackNode temp = top;
         if (top == null) {
@@ -34,6 +37,7 @@ class StackCreation {
         display(temp);
     }
 
+    // Reverse the Stack to display 
     void revserstack() {
 
         StackNode curr = top, pre = null, nex;
@@ -49,6 +53,7 @@ class StackCreation {
         display(top);
     }
 
+    // Display the Stack elements
     void display(StackNode top) {
         StackNode temp = top;
         while (temp != null) {
@@ -71,11 +76,15 @@ public class Stack {
         st.push(2);
         st.push(4);
         st.push(6);
+
+        System.out.println("Total Element in the Stack : " + st.count);
+
         System.out.print("Current Stack Elements : ");
         st.display(st.top);
-        System.out.println("Total Element in the Stack : " + st.count);
+
         System.out.println("Poped Element from the stack : " + st.top.data);
         st.pop();
+
         System.out.print("\nReversed Stack : ");
         st.revserstack();
 
