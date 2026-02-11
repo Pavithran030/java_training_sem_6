@@ -1,0 +1,186 @@
+A - B Tags
+    <a>: Creates hyperlinks. Use: Link to pages, emails, or files (e.g., <a href="https://example.com">Click here</a>).
+
+    <abbr>: Defines abbreviations. Use: Add tooltips for acronyms (e.g., <abbr title="HyperText Markup Language">HTML</abbr>).
+
+    <address>: Contact info for author/owner. Use: Footer contact details.
+
+    <area>: Clickable area in image maps. Use: Interactive image regions.
+
+    <article>: Self-contained content. Use: Blog posts, news stories.
+
+    <aside>: Sidebar content. Use: Pull quotes, ads.
+
+    <audio>: Embed audio files. Use: Podcasts, sound clips.
+
+    <b>: Bold text (stylistically). Use: Keywords, product names.
+
+    <base>: Sets base URL for links. Use: In <head> for relative paths.
+
+C - D Tags
+
+    <caption>: Table title. Use: Describe table contents.
+
+    <cite>: Title of creative work. Use: Books, movies, songs.
+
+    <code>: Inline code snippets. Use: Programming examples.
+
+    <col> / <colgroup>: Column properties in tables. Use: Style table columns.
+
+    <datalist>: Predefined options for inputs. Use: Autocomplete dropdowns.
+
+    <dd>: Description in definition lists. Use: With <dt> for terms/definitions.
+
+    <del>: Deleted/strikethrough text. Use: Track edits.
+
+    <details>: Expandable details. Use: FAQs, accordions.
+
+    <dfn>: Defines a term. Use: First mention of jargon.
+
+    <dialog>: Modal dialogs. Use: Popups, confirmations.
+
+    <dir>: Directory list (deprecated). Use: Avoid; use <ul> instead.
+
+    <div>: Generic container. Use: Group elements for styling/layout.
+
+    <dl>: Definition list. Use: Glossaries, metadata.
+
+    <dt>: Term in definition list. Use: With <dd>.
+
+E - I Tags
+
+    <em>: Emphasized text (italic). Use: Stress in sentences.
+
+    <embed>: External content (plugins). Use: Flash, non-HTML media.
+
+    <fieldset>: Groups form controls. Use: Logical form sections.
+
+    <figcaption>: Figure caption. Use: With <figure>.
+
+    <figure>: Self-contained media. Use: Images, diagrams with captions.
+
+    <footer>: Page/section footer. Use: Copyright, author info.
+
+    <form>: User input form. Use: Logins, searches, contact forms.
+
+    <h1> to <h6>: Headings (h1 largest). Use: Document structure, SEO.
+
+    <head>: Document metadata. Use: Title, links, scripts.
+
+    <header>: Page/section header. Use: Logos, nav bars.
+
+    <hgroup>: Heading groups (deprecated). Use: Avoid; use headings directly.
+
+    <hr>: Horizontal rule. Use: Section breaks.
+
+    <html>: Root element. Use: Wraps entire document.
+
+    <i>: Italic text (stylistic). Use: Foreign words, technical terms.
+
+    <iframe>: Inline frame. Use: Embed videos, maps.
+
+I - M Tags
+
+    <img>: Images. Use: Photos, icons (<img src="image.jpg" alt="Desc">).
+
+    <input>: Form input fields. Use: Text, buttons, checkboxes.
+
+    <ins>: Inserted text (underline). Use: Track additions.
+
+    <kbd>: Keyboard input. Use: Show keys users press.
+
+    <label>: Form label. Use: Clickable text for inputs.
+
+    <legend>: Fieldset caption. Use: Form group titles.
+
+    <li>: List item. Use: In <ul>, <ol>, <dl>.
+
+    <link>: External resources. Use: CSS, favicons in <head>.
+
+    <main>: Primary content. Use: One per page, core content.
+
+M - Q Tags
+    
+    <map>: Image map definition. Use: With <area> for clickable images.
+
+    <mark>: Highlighted text. Use: Search results, important notes.
+
+    <meta>: Metadata. Use: Charset, viewport, SEO in <head>.
+
+    <meter>: Scalar measurement. Use: Progress bars, gauges.
+
+    <nav>: Navigation links. Use: Menus, breadcrumbs.
+
+    <noscript>: Fallback for no JS. Use: Content without JavaScript.
+
+    <object>: Embedded objects. Use: PDFs, SVGs.
+
+    <ol>: Ordered list. Use: Steps, rankings.
+
+    <optgroup>: Grouped <option>s. Use: Categorized dropdowns.
+
+    <option>: Dropdown choice. Use: In <select>.
+
+    <output>: Calculation results. Use: Form outputs.
+
+    <p>: Paragraph. Use: Text blocks.
+
+    <param>: Object parameters. Use: With <object>.
+
+    <picture>: Responsive images. Use: Multiple source sizes.
+
+    <pre>: Preformatted text. Use: Code blocks, ASCII art.
+
+    <progress>: Task progress. Use: Upload/download bars.
+
+    <q>: Inline quotation. Use: Short quotes.
+
+R - Z Tags
+
+    <rp> / <rt> / <ruby>: Ruby annotations. Use: East Asian typography.
+
+    <s>: Strikethrough (deprecated). Use: Avoid; use <del>.
+
+    <samp>: Sample output. Use: Console/program output.
+
+    <script>: JavaScript. Use: Inline or external scripts.
+
+    <section>: Thematic grouping. Use: Page chapters.
+
+    <select>: Dropdown menu. Use: With <option>.
+
+    <small>: Fine print. Use: Copyright, disclaimers.
+
+    <source>: Media sources. Use: In <audio>, <video>, <picture>.
+
+    <span>: Inline container. Use: Style small text parts.
+
+    <strong>: Important text (bold). Use: Warnings, key points.
+
+    <style>: Internal CSS. Use: In <head> or <body>.
+
+    <sub> / <sup>: Subscript/superscript. Use: Formulas (H₂O, x²).
+
+    <summary>: Details summary. Use: With <details> for toggle text.
+
+    <table> / <tbody> / <td> / <tfoot> / <th> / <thead> / <tr>: Tables. Use: Data grids.
+
+    <template>: Hidden content template. Use: JS cloning.
+
+    <textarea>: Multi-line input. Use: Comments, messages.
+
+    <time>: Dates/times. Use: Events, publish dates.
+
+    <title>: Page title. Use: Browser tab text.
+
+    <track>: Text tracks. Use: Captions in <video>.
+
+    <u>: Underline. Use: Proper names, misspellings.
+
+    <ul>: Unordered list. Use: Bulleted lists.
+
+    <var>: Variable/ placeholder. Use: Math variables, code params.
+
+    <video>: Video player. Use: Embed videos.
+
+    <wbr>: Word break opportunity. Use: Long words in narrow containers.

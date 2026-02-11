@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Tags Complete Cheat Sheet - All Examples</title>
+    <style>
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; line-height: 1.6; max-width: 1200px; margin: 0 auto; padding: 20px; }
+        h1, h2 { color: #2c3e50; border-bottom: 3px solid #3498db; padding-bottom: 10px; }
+        h3 { color: #34495e; }
+        code { background: #ecf0f1; padding: 2px 6px; border-radius: 4px; font-family: 'Courier New', monospace; }
+        pre { background: #2c3e50; color: #ecf0f1; padding: 15px; border-radius: 8px; overflow-x: auto; }
+        .example { background: #f8f9fa; border-left: 5px solid #3498db; padding: 15px; margin: 10px 0; }
+        table { border-collapse: collapse; width: 100%; margin: 20px 0; }
+        th, td { border: 1px solid #ddd; padding: 12px; text-align: left; }
+        th { background: #3498db; color: white; }
+        .category { margin-top: 40px; }
+        footer { text-align: center; margin-top: 50px; padding: 20px; background: #34495e; color: white; }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>🏷️ HTML Tags Complete Cheat Sheet</h1>
+        <p>All tags with real working examples - Copy, paste, and practice!</p>
+    </header>
+
+    <main>
+        <!-- 1. Document Structure -->
+        <section class="category">
+            <h2>📄 1. Document Structure (Essential)</h2>
+            <div class="example">
+                <pre><code>&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+  &lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;title&gt;Page Title&lt;/title&gt;
+    &lt;link rel="stylesheet" href="style.css"&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;!-- Your content here --&gt;
+  &lt;/body&gt;
+&lt;/html&gt;</code></pre>
+            </div>
+        </section>
+
+        <!-- 2. Text & Headings -->
+        <section class="category">
+            <h2>✍️ 2. Text Formatting & Headings</h2>
+            <div class="example">
+                <h3>Live Examples:</h3>
+                <h1>This is &lt;h1&gt; - Main Heading</h1>
+                <h2>This is &lt;h2&gt; - Subheading</h2>
+                <h3>This is &lt;h3&gt; - Section Title</h3>
+                
+                <p>This is a &lt;p&gt; paragraph. Use for normal text blocks.</p>
+                
+                <p><strong>Important!</strong> = &lt;strong&gt; (semantic bold)</p>
+                <p><em>Emphasis</em> = &lt;em&gt; (semantic italic)</p>
+                <p><b>Bold (style only)</b> = &lt;b&gt;</p>
+                <p><i>Italic (style only)</i> = &lt;i&gt;</p>
+                
+                <p>Inline code: <code>var x = 10;</code></p>
+                
+                <pre><code>function hello() {
+  console.log("Hi!");
+}</code></pre>
+            </div>
+        </section>
+
+        <!-- 3. Lists -->
+        <section class="category">
+            <h2>📋 3. Lists</h2>
+            <div class="example">
+                <h3>Unordered List (&lt;ul&gt;)</h3>
+                <ul>
+                    <li>Item 1 - Bulleted list</li>
+                    <li>Item 2 - Use for features</li>
+                    <li>Item 3 - Navigation menus</li>
+                </ul>
+
+                <h3>Ordered List (&lt;ol&gt;)</h3>
+                <ol>
+                    <li>First step</li>
+                    <li>Second step</li>
+                    <li>Third step - Use for instructions</li>
+                </ol>
+
+                <h3>Definition List (&lt;dl&gt;)</h3>
+                <dl>
+                    <dt>HTML</dt>
+                    <dd>HyperText Markup Language</dd>
+                    <dt>CSS</dt>
+                    <dd>Cascading Style Sheets</dd>
+                </dl>
+            </div>
+        </section>
+
+        <!-- 4. Links & Images -->
+        <section class="category">
+            <h2>🔗 4. Links & Images</h2>
+            <div class="example">
+                <p><a href="https://google.com" target="_blank">External Link (target="_blank")</a></p>
+                <p><a href="mailto:you@example.com">📧 Email Link</a></p>
+                <p><a href="#forms">⬇️ Jump to Forms Section</a></p>
+                
+                <h3>Image Example</h3>
+                <img src="https://via.placeholder.com/300x200/3498db/ffffff?text=HTML+Image" alt="Sample Image" width="300">
+                
+                <details>
+                    <summary>Responsive Image (&lt;picture&gt;)</summary>
+                    <picture>
+                        <source srcset="https://via.placeholder.com/800x400/3498db/ffffff?text=Large" media="(min-width: 800px)">
+                        <img src="https://via.placeholder.com/400x200/3498db/ffffff?text=Small" alt="Responsive">
+                    </picture>
+                </details>
+            </div>
+        </section>
+
+        <!-- 5. Forms -->
+        <section id="forms" class="category">
+            <h2>📝 5. Complete Form Example</h2>
+            <div class="example">
+                <form action="#" method="POST">
+                    <p>
+                        <label for="name">Full Name:</label><br>
+                        <input type="text" id="name" name="name" placeholder="Enter your name" required>
+                    </p>
+                    
+                    <p>
+                        <label for="email">Email:</label><br>
+                        <input type="email" id="email" name="email" placeholder="you@example.com">
+                    </p>
+                    
+                    <p>
+                        <input type="radio" id="male" name="gender" value="male">
+                        <label for="male">Male</label>
+                        <input type="radio" id="female" name="gender" value="female">
+                        <label for="female">Female</label>
+                    </p>
+                    
+                    <p>
+                        <input type="checkbox" id="terms" name="terms">
+                        <label for="terms">Accept Terms & Conditions</label>
+                    </p>
+                    
+                    <p>
+                        <label for="country">Country:</label><br>
+                        <select id="country" name="country">
+                            <optgroup label="Asia">
+                                <option value="IN">India</option>
+                                <option value="CN">China</option>
+                            </optgroup>
+                            <optgroup label="Europe">
+                                <option value="US">USA</option>
+                                <option value="UK">UK</option>
+                            </optgroup>
+                        </select>
+                    </p>
+                    
+                    <p>
+                        <label for="message">Message:</label><br>
+                        <textarea id="message" name="message" rows="4" cols="50" placeholder="Your message here..."></textarea>
+                    </p>
+                    
+                    <p>
+                        <button type="submit">🚀 Submit Form</button>
+                        <button type="reset">🔄 Reset</button>
+                    </p>
+                </form>
+            </div>
+        </section>
+
+        <!-- 6. Tables -->
+        <section class="category">
+            <h2>📊 6. Tables</h2>
+            <div class="example">
+                <table>
+                    <caption>Student Marks Table</caption>
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <th>Maths</th>
+                            <th>Science</th>
+                            <th>Total</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Raj</td>
+                            <td>85</td>
+                            <td>90</td>
+                            <td>175</td>
+                        </tr>
+                        <tr>
+                            <td>Priya</td>
+                            <td>92</td>
+                            <td>88</td>
+                            <td>180</td>
+                        </tr>
+                    </tbody>
+                    <tfoot>
+                        <tr>
+                            <td><strong>Average</strong></td>
+                            <td>88.5</td>
+                            <td>89</td>
+                            <td><strong>177.5</strong></td>
+                        </tr>
+                    </tfoot>
+                </table>
+            </div>
+        </section>
+
+        <!-- 7. Layout Structure -->
+        <section class="category">
+            <h2>🏗️ 7. Semantic Layout</h2>
+            <div class="example">
+                <header style="background: #3498db; color: white; padding: 20px; margin-bottom: 20px;">
+                    <h3>&lt;header&gt; - Site Header</h3>
+                    <nav>
+                        <a href="#" style="color: white; margin-right: 20px;">Home</a>
+                        <a href="#" style="color: white; margin-right: 20px;">About</a>
+                        <a href="#" style="color: white;">Contact</a>
+                    </nav>
+                </header>
+
+                <div style="display: flex; gap: 20px;">
+                    <main style="flex: 2;">
+                        <section>
+                            <h4>&lt;main&gt; &lt;section&gt; &lt;article&gt;</h4>
+                            <p>Main content goes here...</p>
+                        </section>
+                    </main>
+                    
+                    <aside style="flex: 1; background: #f8f9fa; padding: 20px;">
+                        <h4>&lt;aside&gt; - Sidebar</h4>
+                        <ul>
+                            <li>Quick Link 1</li>
+                            <li>Quick Link 2</li>
+                        </ul>
+                    </aside>
+                </div>
+
+                <footer style="background: #2c3e50; color: white; padding: 20px; margin-top: 20px; text-align: center;">
+                    <p>&lt;footer&gt; &copy; 2026 MySite. All rights reserved.</p>
+                </footer>
+            </div>
+        </section>
+
+        <!-- 8. Media -->
+        <section class="category">
+            <h2>🎥 8. Media Elements</h2>
+            <div class="example">
+                <h3>Video Player</h3>
+                <video width="400" controls>
+                    <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
+                    Your browser does not support video.
+                </video>
+
+                <h3>Audio Player</h3>
+                <audio controls style="width: 400px;">
+                    <source src="https://www.w3schools.com/html/horse.mp3" type="audio/mpeg">
+                </audio>
+
+                <h3>YouTube Embed</h3>
+                <iframe width="560" height="315" 
+                        src="https://www.youtube.com/embed/dQw4w9WgXcQ" 
+                        title="Sample Video" frameborder="0">
+                </iframe>
+            </div>
+        </section>
+
+        <!-- 9. Interactive -->
+        <section class="category">
+            <h2>🎯 9. Interactive Elements</h2>
+            <div class="example">
+                <details>
+                    <summary>❓ Click to Expand - &lt;details&gt; &lt;summary&gt;</summary>
+                    <p>This content is hidden until clicked! Perfect for FAQs.</p>
+                </details>
+
+                <details open>
+                    <summary>📊 Progress Bar - &lt;progress&gt;</summary>
+                    <p>Upload Progress:</p>
+                    <progress value="75" max="100" style="width: 300px;"></progress>
+                    <p>&lt;meter value="8" min="0" max="10"&gt; Rating: 8/10</p>
+                </details>
+
+                <dialog open style="border: 2px solid #3498db; padding: 20px; border-radius: 8px;">
+                    <h4>🪟 Modal Dialog Example</h4>
+                    <p>This is a &lt;dialog&gt; modal popup!</p>
+                    <button onclick="this.parentElement.close()">Close</button>
+                </dialog>
+            </div>
+        </section>
+
+        <!-- 10. Utility Tags -->
+        <section class="category">
+            <h2>🔧 10. Utility Tags</h2>
+            <div class="example">
+                <p>Inline styling: <span style="background: yellow; padding: 2px 6px;">&lt;span&gt;</span></p>
+                <p>Block container: <div style="background: #e8f4f8; padding: 10px; margin: 10px 0;">&lt;div&gt; for layout</div></p>
+                
+                <hr>
+                <p>Line break: Line 1<br>Line 2</p>
+                
+                <p>Text effects:</p>
+                <p><mark>Highlighted</mark> | <del>₹1000 (old)</del> <ins>₹800 (new)</ins></p>
+                <p>Chemical: H<sub>2</sub>O | Math: x<sup>2</sup> + y<sup>2</sup> = z<sup>2</sup></p>
+                <p>Date: <time datetime="2026-02-03">Feb 3, 2026</time></p>
+            </div>
+        </section>
+
+        <!-- Quick Reference Table -->
+        <section class="category">
+            <h2>⚡ Quick Reference: Top 20 Tags</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Tag</th>
+                        <th>Purpose</th>
+                        <th>Usage</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr><td>&lt;h1&gt;-&lt;h6&gt;</td><td>Headings</td><td>Document structure</td></tr>
+                    <tr><td>&lt;p&gt;</td><td>Paragraph</td><td>Text blocks</td></tr>
+                    <tr><td>&lt;div&gt;</td><td>Container</td><td>Layout/styling</td></tr>
+                    <tr><td>&lt;a&gt;</td><td>Link</td><td>href="url"</td></tr>
+                    <tr><td>&lt;img&gt;</td><td>Image</td><td>src="file.jpg" alt="desc"</td></tr>
+                    <tr><td>&lt;ul&gt;/&lt;ol&gt;</td><td>Lists</td><td>&lt;li&gt; items</td></tr>
+                    <tr><td>&lt;form&gt;</td><td>Form</td><td>action="/url" method="POST"</td></tr>
+                    <tr><td>&lt;input&gt;</td><td>Input</td><td>type="text/email/etc"</td></tr>
+                    <tr><td>&lt;table&gt;</td><td>Table</td><td>&lt;tr&gt;&lt;th&gt;&lt;td&gt;</td></tr>
+                    <tr><td>&lt;button&gt;</td><td>Button</td><td>type="submit/reset"</td></tr>
+                </tbody>
+            </table>
+        </section>
+    </main>
+
+    <footer>
+        <h3>🚀 Ready to Practice?</h3>
+        <p><strong>Copy this entire file</strong> → Save as <code>cheatsheet.html</code> → Open in browser!</p>
+        <p>📱 Fully responsive • 🎨 Styled • ✅ All tags working • 📄 Printable</p>
+        <p><em>Master HTML fundamentals before CSS & JavaScript!</em></p>
+    </footer>
+
+    <script>
+        // Simple interactivity demo
+        document.querySelectorAll('details').forEach(detail => {
+            detail.addEventListener('toggle', function() {
+                console.log('Interactive element toggled!');
+            });
+        });
+    </script>
+</body>
+</html>
