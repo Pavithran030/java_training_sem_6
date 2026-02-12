@@ -13,7 +13,7 @@ class Node {
 
 class Linkedlist {
 
-    Node head, tail;
+    Node head;
 
     void insert(int a) {
 
@@ -41,6 +41,7 @@ class Linkedlist {
         while (temp.next != null) {
             temp = temp.next;
         }
+        // temp = temp.next;
 
     }
 
