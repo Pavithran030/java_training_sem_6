@@ -1,0 +1,123 @@
+/* 1. Outer Background (Grey area) */
+html, body {
+    height: 100%; 
+    width: 100%;
+    margin: 30px 20px 70px 10px;
+    padding: 0;
+    background-color: #e5e0e0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden; 
+}
+
+/* 2. Inner Square (White card) */
+.first {
+    /* Keeps your specific margin-based sizing */
+    height: calc(100vh - 80px); 
+    width: calc(100vw - 60px);  
+    
+    background-color: white;
+    border-radius: 8px;
+    
+    /* Centers the header and the blue section vertically */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+    box-sizing: border-box; 
+    padding: 20px;
+}
+
+/* 3. Header Text Section */
+.one {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.one h2 {
+    margin: 5px 0;
+    font-family: sans-serif;
+}
+
+.one h4 {
+    font-weight: 400;
+    color: #555;
+    max-width: 600px;
+}
+/* Container for the 3 columns */
+
+.inclass1{
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* This keeps the side cards centered vertically */
+    justify-content: center;   
+}
+.inclass {
+    display: flex;
+    flex-direction: row;
+    align-items: center; /* This keeps the side cards centered vertically */
+    justify-content: center;
+    gap: 30px;
+    width: 100%;
+    max-width: 1100px;
+    padding: 20px;
+}
+
+/* Middle column container to stack V2 and V4 */
+.middle-col {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+/* The Cards */
+.vertical1, .vertical2, .vertical3, .vertical4 {
+    flex: 1;
+    min-width: 280px;
+    height: 220px;
+    background-color: white; /* Change from blue to white */
+    border-radius: 8px;
+    padding: 25px;
+    box-shadow: 0px 10px 20px rgba(0,0,0,0.1); /* Adds the shadow from sample */
+    text-align: left; /* Align text to left like sample */
+    box-sizing: border-box;
+    
+    /* Specific Top Borders for each card */
+    border-top: 5px solid; 
+}
+
+/* Color coding the top borders to match sample */
+.vertical1 { border-top-color: hsl(180, 62%, 55%); } /* Cyan */
+.vertical2 { border-top-color: hsl(0, 78%, 62%); }   /* Red */
+.vertical4 { border-top-color: hsl(34, 97%, 64%); }  /* Orange */
+.vertical3 { border-top-color: hsl(212, 86%, 64%); } /* Blue */
+
+/* Typography inside cards */
+.inclass h3 {
+    margin: 0 0 10px 0;
+    color: #4c4e61;
+}
+
+.inclass p {
+    font-size: 13px;
+    color: #a3a5ae;
+    line-height: 1.5;
+}
+
+/* --- Add only this block to the end of your file --- */
+
+.vertical1, .vertical2, .vertical3, .vertical4 {
+    /* Smooth transition makes the lift feel fluid rather than snapping */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+}
+
+.vertical1:hover, .vertical2:hover, .vertical3:hover, .vertical4:hover {
+    /* Lifts the card up slightly */
+    transform: translateY(-8px);
+    
+    /* Deepens the shadow to simulate height */
+    box-shadow: 0px 15px 30px rgba(0, 0, 0, 0.15);
+}
