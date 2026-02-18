@@ -1,0 +1,119 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+body {
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Poppins', sans-serif;
+
+    /* Colorful background */
+    background: linear-gradient(135deg, #ff6ec4, #7873f5);
+}
+
+/* Card Style */
+.login,
+.forms {
+    width: 420px;
+    min-height: 500px;
+    padding: 40px;
+    border-radius: 20px;
+
+    /* STATIC CARD COLOR */
+    background: #ffffff;
+
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* Title */
+#head {
+    text-align: center;
+    font-size: 26px;
+    font-weight: 600;
+    color: #444;
+}
+
+/* Form Groups */
+.users,
+.pas,
+#name,
+#gender,
+#phone,
+#address {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+/* Labels */
+label {
+    font-size: 14px;
+    font-weight: 500;
+    color: #333;
+}
+
+/* Required Star */
+#star {
+    color: red;
+    font-weight: bold;
+}
+
+/* Inputs & Select */
+input,
+select {
+    padding: 12px;
+    border-radius: 10px;
+    border: 1px solid #ddd;
+    font-size: 14px;
+    outline: none;
+    transition: 0.3s ease;
+}
+
+/* Focus Effect */
+input:focus,
+select:focus {
+    border-color: #7873f5;
+    box-shadow: 0 0 8px rgba(120, 115, 245, 0.4);
+}
+
+/* Checkbox */
+#term {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 13px;
+}
+
+/* Buttons */
+#login,
+#submit {
+    margin-top: 15px;
+    padding: 14px;
+    border-radius: 12px;
+    border: none;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+
+    background: linear-gradient(45deg, #ff6ec4, #7873f5);
+    color: white;
+
+    transition: 0.3s ease;
+}
+
+/* Button Hover */
+#login:hover,
+#submit:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+}
+
+#but{
+    display: flex;
+    justify-content: center;
+}
