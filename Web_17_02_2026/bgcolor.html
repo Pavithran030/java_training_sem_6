@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bg Changer</title>
+
+    <style>
+        #colorPicker{
+            font-size: large;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            font-style:oblique;
+        }
+
+        .box{
+            display: flex;
+            justify-content: center;
+            font-size: larger;
+            font-size: large;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+
+        }
+
+    </style>
+
+</head>
+<body >
+
+    <h1 style="text-align: center;">Choose the colour to change the BG</h1>
+
+
+    <div class="box">
+        <label style="color: black;" for="colorPicker">Choose a background color :  &emsp13;</label>
+
+        <select onchange="picker()" id="colorPicker" name="colorPicker">
+            <option value="#FFFFFF">White</option>
+            <option value="#FF0000">Red</option>
+            <option value="#00FF00">Green</option>
+            <option value="#0000FF">Blue</option>
+            <option value="#FFFF00">Yellow</option>
+            <option value="#FF00FF">Magenta</option>
+            <option value="#00FFFF">Cyan</option>
+            <option value="#FFA500">Orange</option>
+            <option value="#800080">Purple</option>
+            <option value="#008080">Teal</option>
+            <option value="#000000">Black</option>
+        </select>
+    </div>
+    
+
+
+    <script>
+
+        let picker =()=>{
+            const col=document.getElementById("colorPicker");
+            document.body.style.backgroundColor =col.value;
+        };
+
+
+    </script>
+
+    
+</body>
+</html>

@@ -1,0 +1,55 @@
+
+<!-- reponsive based name chnage in the live server using the onclick with the help of the button -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Testing</title>
+</head>
+<body>
+
+    <h2 id="change" style="text-align: center;">Sample Page</h2>
+
+    <div style="display:flex; justify-content: center; " >
+        <button style="border: 2px solid black; border-radius: 3px;" onclick="changing()" >Click Me the See the Next Word</button>
+    </div>
+    
+    <script>
+        console.log("testing");
+
+
+        // using a Tag Name.... "Elements "
+
+        function changing(){
+            var a=document.getElementsByTagName("h2")
+
+            if(a[0].innerHTML=="Sample Page"){
+                a[0].innerHTML="Next Page"
+            }
+            else{
+                a[0].innerHTML="Sample Page"
+            }
+        }
+
+        // Using the id name " Element "
+
+        // function changing(){
+        //     var a=document.getElementById("change")
+
+        //     if(a.innerHTML=="Sample Page"){
+        //         a.innerHTML="Next Page"
+        //     }
+        //     else{
+        //         a.innerHTML="Sample Page"
+        //     }
+        // }
+
+
+
+    </script>
+    
+</body>
+</html>

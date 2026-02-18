@@ -1,0 +1,50 @@
+<!-- Click count increaser -->
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Click count</title>
+    <link rel="stylesheet" href="style2.css">
+
+ </head>
+ <body>
+
+    <div style="text-align: center; text-shadow: 0 0 3px #ff0000, 0 0 5px #0000ff;">
+        <h2 >Click to increase the count</h2>
+        <h3 id="counts" >0</h3>
+    </div>
+    
+
+    <div style="display: flex;justify-content: center;gap: 20px;">
+        
+        <button id="b1" onclick="countp()">Click Here ++ </button>
+        <button id="b1" onclick="countm()">Click Here -- </button>
+        <button id="b1" onclick="clears()">Clear</button>
+
+    </div>
+    
+
+    <script src="main2.js"></script>
+
+    <!-- <script>
+        var c=document.getElementsByTagName("h3")
+        var inc=0;
+        let countp =()=>{
+            inc++;
+            c[0].innerHTML=inc;
+        };
+
+        let countm =()=>{
+            inc--;
+            c[0].innerHTML=inc;
+        };
+
+        let clears =()=>{
+            c[0].innerHTML=0;
+
+        };
+    </script> -->
+    
+ </body>
+ </html>
