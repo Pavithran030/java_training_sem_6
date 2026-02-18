@@ -1,0 +1,262 @@
+DSA: Linked List
+Problem:
+Given a singly linked list, count the number of nodes.
+Concept:
+Traversal
+
+Input (Conceptual):
+10 → 20 → 30 → 20 → 40 → 50 → 30
+Output:
+Number of nodes = 7
+
+Problem:
+Check whether a linked list is empty or not.
+
+Input (Conceptual):
+10 → 20 → 30
+
+Output:
+Linked List is NOT empty
+
+Problem:
+Find the last element of a singly linked list.
+
+Input (Conceptual):
+10 → 20 → 30 → 40
+Output:
+Last element = 40
+  
+Problem:
+Print the middle element of a singly linked list.
+
+Input (Conceptual):
+10 → 20 → 30 → 40 → 50
+Output:
+Middle element = 30
+
+Problem:
+Count how many nodes have even values in the linked list.
+
+Input (Conceptual):
+10 → 21 → 30 → 45 → 40
+Output:
+Even value count = 3
+
+Problem:
+Delete the first node of a singly linked list and print the updated list.
+
+Input (Conceptual):
+10 → 20 → 30 → 40
+Output:
+20 → 30 → 40
+
+
+
+
+
+DSA: Stack
+Problem:
+Check whether a stack is empty or not.
+
+Input (Conceptual):
+Stack: []
+Output:
+Stack is EMPTY
+
+Problem:
+Find the top element of a stack.
+Input (Conceptual):
+Stack: 10, 20, 30
+Output:
+Top element = 30
+
+Problem:
+Count the number of elements in a stack.
+
+Input (Conceptual):
+Stack: 5, 10, 15, 20
+Output:
+Number of elements = 4
+
+Problem:
+Check whether a given string has balanced brackets.
+Concept:
+Stack + matching pairs
+Input (Conceptual):
+{[()]}
+Output:
+Balanced
+
+Problem:
+Reverse a stack.
+Concept:
+Pop and push logic
+Input (Conceptual):
+Stack: 1, 2, 3, 4
+Output:
+4, 3, 2, 1
+
+
+
+
+DSA: Queue
+Problem:
+Check whether a queue is empty or not.
+Concept:
+Front and rear check
+
+Input (Conceptual):
+Queue: []
+Output:
+Queue is EMPTY
+
+Problem:
+Find the front element of a queue.
+
+Input (Conceptual):
+Queue: 10, 20, 30
+Output:
+Front element = 10
+
+Problem:
+Count the number of elements in a queue.
+Input (Conceptual):
+Queue: 5, 15, 25, 35
+Output:
+Number of elements = 4
+
+Problem:
+Delete the front element of a queue and print the updated queue.
+Input (Conceptual):
+Queue: 10, 20, 30, 40
+Output:
+20, 30, 40
+
+DSA: Stack & Queue
+Problem:
+Given a stack and a queue:
+
+Reverse the stack
+
+Check whether the queue is empty
+
+Find the front element of the queue
+
+Print final stack and queue
+
+Concept:
+Stack operations, queue operations, traversal
+
+Input (Conceptual):
+Stack: 10, 20, 30
+Queue: 5, 15, 25
+
+Expected Output:
+Reversed Stack:
+30, 20, 10
+
+Queue empty check:
+NOT EMPTY
+
+Front element of Queue:
+5
+
+Final Stack:
+30, 20, 10
+
+Final Queue:
+5, 15, 25
+
+DSA: Doubly Linked List
+Problem:
+Check whether a doubly linked list is empty or not.
+
+Concept:
+Head pointer check
+
+Input (Conceptual):
+[]
+Output:
+Doubly Linked List is EMPTY
+
+Problem:
+Count the number of nodes in a doubly linked list.
+Concept:
+Traversal using next pointer
+
+Input (Conceptual):
+10 ⇄ 20 ⇄ 30 ⇄ 40
+Output:
+Number of nodes = 4
+
+Problem:
+Print the first element of a doubly linked list.
+Concept:
+Head node access
+Input (Conceptual):
+5 ⇄ 15 ⇄ 25
+Output:
+First element = 5
+
+Problem:
+Print the last element of a doubly linked list.
+
+Input (Conceptual):
+5 ⇄ 15 ⇄ 25 ⇄ 35
+Output:
+Last element = 35
+
+Problem:
+Delete the last node of a doubly linked list.
+Concept:
+Previous pointer update
+Input (Conceptual):
+10 ⇄ 20 ⇄ 30
+Output:
+10 ⇄ 20
+ 
+🔹 DSA: Circular Linked List
+Problem:
+Check whether a linked list is circular or not.
+Concept:
+Last node points to head
+Input (Conceptual):
+10 → 20 → 30 → (back to 10)
+Output:
+Circular Linked List
+
+Problem:
+Count the number of nodes in a circular linked list.
+
+Concept:
+Do-while traversal
+Input (Conceptual):
+1 → 2 → 3 → 4 → (back to 1)
+Output:
+Number of nodes = 4
+
+Problem:
+Print all elements of a circular linked list.
+
+Concept:
+Traversal until head is reached again
+Input (Conceptual):
+10 → 20 → 30 → (back to 10)
+Output:
+10 → 20 → 30
+
+Problem:
+Find the head element of a circular linked list.
+
+Input (Conceptual):
+5 → 15 → 25 → (back to 5)
+Output:
+Head element = 5
+
+Problem:
+Delete the first node of a circular linked list.
+
+Input (Conceptual):
+10 → 20 → 30 → (back to 10)
+Output:
+20 → 30 → (back to 20)

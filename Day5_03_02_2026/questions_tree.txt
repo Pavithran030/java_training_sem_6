@@ -1,0 +1,239 @@
+DSA:Tree
+Problem:
+Check whether a tree is empty or not.
+Concept:
+Root node check (root == null)
+
+Input (Conceptual):
+[]
+Output:
+Tree is EMPTY
+
+Problem:
+Count the number of nodes in a binary tree.
+Input (Conceptual):
+      10
+     /  \
+   20    30
+Output:
+Number of nodes = 3
+
+Problem:
+Find the height of a binary tree.
+Input (Conceptual):
+      10
+     /  \
+   20    30
+        /
+       40
+Output:
+Height = 3
+
+Problem:
+Print the leaf nodes of a binary tree.
+Concept:
+Traversal + condition (left == null && right == null)
+Input (Conceptual):
+
+      10
+     /  \
+   20    30
+Output:
+Leaf nodes: 20 30
+
+Problem:
+Find the root element of a tree.
+Input (Conceptual):
+
+      50
+     /  \
+   25    75
+Output:
+Root element = 50
+
+Problem:
+Given a binary tree:
+Count the total number of nodes
+Print the leaf nodes
+Find the height of the tree
+Print the root element
+Input (Conceptual):
+        10
+       /  \
+     20    30
+           \
+            40
+Expected Output:
+Number of nodes: 4
+Leaf nodes: 20 40
+Height: 3
+Root element: 10
+
+DSA: Tree Traversal
+Problem:
+Print the Inorder traversal of the given binary tree.
+
+Concept: Left → Root → Right
+Input (Conceptual):
+        40
+       /  \
+     20    60
+    /  \   /
+  10   30 50
+Output:
+10 20 30 40 50 60
+
+Problem:
+Print the Preorder traversal of the given binary tree.
+
+Concept: Root → Left → Right
+Input (Conceptual):
+        40
+       /  \
+     20    60
+    /  \   /
+  10   30 50
+Output:
+40 20 10 30 60 50
+
+Problem:
+Print the Postorder traversal of the given binary tree.
+
+Concept: Left → Right → Root
+Input (Conceptual):
+        40
+       /  \
+     20    60
+    /  \   /
+  10   30 50
+Output:
+10 30 20 50 60 40
+Problem:
+Print the Level Order traversal of a binary tree.
+Input (Conceptual):
+      1
+     / \
+    2   3
+Output:
+1 2 3
+
+Problem:
+Print the Level Order traversal of the given binary tree.
+
+Concept: Queue (BFS)
+Input (Conceptual):
+        40
+       /  \
+     20    60
+    /  \   /
+  10   30 50
+Output:
+40 20 60 10 30 50
+
+Problem:
+Insert a node into a Binary Search Tree.
+
+Concept: Left < Root < Right
+Input (Conceptual):
+Insert: 30, 20, 40, 10
+Output (Inorder):
+10 20 30 40
+
+Problem:
+Find the minimum element in a BST.
+
+Concept: Leftmost node
+Input (Conceptual):
+      25
+     /  \
+   15    35
+  /
+ 10
+Output:
+Minimum element = 10
+
+Problem:
+Search for a key in a BST.
+Concept: Binary search property
+Input (Conceptual):
+BST elements: 20 10 30 5 15
+Key: 15
+Output:
+Key FOUND
+
+DSA: AVL Tree
+Problem:
+Check whether a tree is height balanced.
+Concept: Balance Factor = height(left) − height(right)
+Input (Conceptual):
+
+      30
+     /  \
+   20    40
+Output:
+Balanced AVL Tree
+
+Problem:
+Find the balance factor of a node.
+
+Concept: Height difference
+Input (Conceptual):
+      20
+     /
+   10
+Output:
+Balance Factor = 1
+
+Problem:
+Identify the rotation needed after insertion.
+Concept: LL, RR, LR, RL rotations
+
+Input (Conceptual):
+Insert: 30, 20, 10
+Output:
+LL Rotation
+
+Problem:
+Perform rotation to balance the tree.
+
+Concept: Right / Left rotation
+Input (Conceptual):
+Before rotation:
+   30
+  /
+ 20
+/
+10
+Output (After rotation):
+    20
+   /  \
+ 10   30
+
+Problem:
+Given a Binary Search Tree:
+Print Inorder traversal
+Find minimum element
+Check whether the tree is balanced
+Identify rotation if unbalanced
+
+Input (Conceptual):
+Insert: 30, 20, 10
+
+Expected Output:
+Inorder: 10 20 30
+Minimum element: 10
+Tree status: Unbalanced
+Required rotation: LL Rotation
+
+Problem:
+Print Inorder, Preorder, and Postorder traversals of the tree.
+Input (Conceptual):
+        25
+       /  \
+     15    40
+    /  \     \
+  10   20     50
+Output:
+Inorder: 10 15 20 25 40 50
+Preorder: 25 15 10 20 40 50
+Postorder: 10 20 15 50 40 25
