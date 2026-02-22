@@ -1,0 +1,101 @@
+#nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #4f46e5;
+    color: white;
+    padding: 5px;
+}
+
+p {
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: large;
+    font-weight: 400;
+    padding: 5px;
+    margin-left: 20px;
+}
+
+#btn {
+    height: 40px;
+    width: 80px;
+    background-color: aliceblue;
+    color: black;
+    border-radius: 50px;
+    border: none;
+    padding: 5px;
+    margin-right: 10px;
+}
+
+#banner {
+    height: 300px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.frm {
+    max-width: 600px;
+    margin: 0 auto;
+    background: #fff;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.rw {
+    display: grid;
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+.grp {
+    display: flex;
+    flex-direction: column;
+}
+
+.grp label {
+    font-size: 14px;
+    font-weight: 600;
+    color: #374151;
+    margin-bottom: 6px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.grp input,
+.grp select {
+    padding: 12px;
+    border: 2px solid #e5e7eb;
+    border-radius: 8px;
+    font-size: 15px;
+    transition: all 0.3s;
+}
+
+.grp input:focus,
+.grp select:focus {
+    outline: none;
+    border-color: #4f46e5;
+}
+
+.exm {
+    margin-bottom: 20px;
+}
+
+.div {
+    height: 1px;
+    background: #e5e7eb;
+    margin: 25px 0;
+}
+
+.btn {
+    width: 100%;
+    padding: 14px;
+    background: #4f46e5;
+    border-radius: 8px;
+    font-size: 16px;
+    transition: all 0.3s;
+    letter-spacing: 1px;
+}

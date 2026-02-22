@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+    <link rel="stylesheet" href="index.css">
+
+</head>
+
+<body style="background-color: #97b0e2;">
+    <form id="mfrm" class="frm" autocomplete="off">
+        <div class="rw">
+            <div class="grp">
+                <label for="sid">Student ID</label>
+                <input type="text" id="sid" placeholder="e.g. STU001" required>
+            </div>
+            <div class="grp">
+                <label for="snm">Student Name</label>
+                <input type="text" id="snm" placeholder="Full Name" required>
+            </div>
+        </div>
+
+        <div class="grp exm">
+            <label for="etp">Exam Type</label>
+            <select id="etp" required>
+                <option value="" disabled selected>-- Select Exam --</option>
+                <option value="Quarterly">Quarterly</option>
+                <option value="Half-Yearly">Half-Yearly</option>
+                <option value="Annual">Annual</option>
+            </select>
+        </div>
+
+        <div class="rw">
+            <div class="grp">
+                <label for="s1">Tamil</label>
+                <input type="number" id="s1" placeholder="0 - 100" required>
+            </div>
+            <div class="grp">
+                <label for="s2">English</label>
+                <input type="number" id="s2" min="0" max="100" placeholder="0 - 100" required>
+            </div>
+            <div class="grp">
+                <label for="s3">Maths</label>
+                <input type="number" id="s3" min="0" max="100" placeholder="0 - 100" required>
+            </div>
+            <div class="grp">
+                <label for="s4">Science</label>
+                <input type="number" id="s4" min="0" max="100" placeholder="0 - 100" required>
+            </div>
+            <div class="grp">
+                <label for="s5">Social Science</label>
+                <input type="number" id="s5" min="0" max="100" placeholder="0 - 100" required>
+            </div>
+        </div>
+
+        <br>
+        <p>give th simple js code to store the deatils in local localStorage</p>
+        <button type="submit" class="btn">Submit Marks</button>
+        <h1 id="res"></h1>
+        
+        <button id="gets" onclick="display()">View</button>
+        
+    </form>
+
+    <script src="forms.js"></script>
+</body>
+
+</html>
