@@ -25,6 +25,9 @@ values(2,'Praveen','S',50000,'2026-02-21 09:05:00','AIML'),
 alter table worker add Gender enum('Male','Female','Other');
 
 update worker set Gender='Male' where WORKER_ID='2';  
-
 select* from worker;
 select * from worker where FIRST_NAME="Praveen";
+
+-- Question-1 alias name WORKER_NAME
+
+select f.FIRST_NAME  from worker as f where f.FIRST_NAME='Praveen'; 	
