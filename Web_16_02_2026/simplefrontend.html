@@ -39,8 +39,11 @@
                 </div>
 
                 <div class="vertical3">
-                    <h3>Calculator</h3>
+                    <h3 id="dis">Calculator</h3>
                     <p>Uses data from past projects to provide better delivery estimates</p>
+                    <button onclick="testing()">Click Me-1</button>
+                    <button onclick="test()">Click Me-2</button>
+                    <button onclick="greet()">Click Me-3</button>
                 </div>
 
             </div>
@@ -61,6 +64,10 @@
 
     let testing = () =>{
         console.log("Arrow function testing");
+
+        var a=document.getElementsByClassName("vertical3");
+
+        console.log(a[0].innerText);
     };
     let greet =function(){
         console.log("Function Expression....")
@@ -68,9 +75,10 @@
 
     for(let i in movie){
         console.log(i+" : "+movie[i])
-        test()
-        testing();
-        greet();
+        
+        // test()
+        // testing();
+        // greet();
     }
 
     function test(){

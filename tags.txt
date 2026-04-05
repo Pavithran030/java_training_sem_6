@@ -184,3 +184,177 @@ R - Z Tags
     <video>: Video player. Use: Embed videos.
 
     <wbr>: Word break opportunity. Use: Long words in narrow containers.
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Result</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: #97b0e2;
+            padding: 40px 20px;
+        }
+        
+        .box {
+            max-width: 600px;
+            margin: 0 auto;
+            background: #fff;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+        }
+        
+        h2 {
+            color: #4f46e5;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        
+        .info {
+            margin-bottom: 20px;
+            padding: 15px;
+            background: #f3f4f6;
+            border-radius: 8px;
+        }
+        
+        .info p {
+            margin: 8px 0;
+            font-size: 15px;
+        }
+        
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+        
+        th, td {
+            padding: 12px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+        
+        th {
+            background: #4f46e5;
+            color: #fff;
+        }
+        
+        .pass {
+            color: #16a34a;
+            font-weight: bold;
+        }
+        
+        .fail {
+            color: #dc2626;
+            font-weight: bold;
+        }
+        
+        .sum {
+            margin-top: 20px;
+            padding: 20px;
+            background: #f3f4f6;
+            border-radius: 8px;
+            text-align: center;
+        }
+        
+        .sum h3 {
+            margin: 10px 0;
+            color: #374151;
+        }
+        
+        .btn {
+            display: block;
+            width: 200px;
+            margin: 20px auto 0;
+            padding: 12px;
+            background: #4f46e5;
+            color: #fff;
+            text-align: center;
+            text-decoration: none;
+            border-radius: 8px;
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <h2>Student Result</h2>
+        
+        <div class="info" id="info"></div>
+        
+        <table>
+            <thead>
+                <tr>
+                    <th>Subject</th>
+                    <th>Marks</th>
+                    <th>Status</th>
+                </tr>
+            </thead>
+            <tbody id="tbl"></tbody>
+        </table>
+        
+        <div class="sum" id="sum"></div>
+        
+        <a href="index.html" class="btn">Back to Form</a>
+    </div>
+
+    <script>
+        let data = JSON.parse(localStorage.getItem('stuData'));
+        
+        if (!data) {
+            document.querySelector('.box').innerHTML = '<h2>No Data Found</h2><a href="index.html" class="btn">Go to Form</a>';
+        } else {
+            // Student info
+            document.getElementById('info').innerHTML = `
+                <p><strong>ID:</strong> ${data.sid}</p>
+                <p><strong>Name:</strong> ${data.snm}</p>
+                <p><strong>Exam:</strong> ${data.etp}</p>
+            `;
+            
+            // Subject results
+            let subs = ['Tamil', 'English', 'Maths', 'Science', 'Social Science'];
+            let marks = [data.marks.s1, data.marks.s2, data.marks.s3, data.marks.s4, data.marks.s5];
+            let res = [data.res.r1, data.res.r2, data.res.r3, data.res.r4, data.res.r5];
+            
+            let html = '';
+            for (let i = 0; i < 5; i++) {
+                let cls = res[i] === 'Pass' ? 'pass' : 'fail';
+                html += `
+                    <tr>
+                        <td>${subs[i]}</td>
+                        <td>${marks[i]}</td>
+                        <td class="${cls}">${res[i]}</td>
+                    </tr>
+                `;
+            }
+            document.getElementById('tbl').innerHTML = html;
+            
+            // Summary
+            let ovrCls = data.ovr === 'Pass' ? 'pass' : 'fail';
+            document.getElementById('sum').innerHTML = `
+                <h3>Total: ${data.total} / 500</h3>
+                <h3>Average: ${data.avg}%</h3>
+                <h3 class="${ovrCls}">Overall: ${data.ovr}</h3>
+            `;
+        }
+    </script>
+</body>
+</html>
+
+
+
+
+
+
+    <!-- <style>

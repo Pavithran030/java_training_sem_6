@@ -28,6 +28,10 @@ update worker set Gender='Male' where WORKER_ID='2';
 select* from worker;
 select * from worker where FIRST_NAME="Praveen";
 
+update worker set FIRST_NAME='aa' where WORKER_ID='5';
+
+select *from worker where FIRST_NAME like '_a';
+
 -- Question-1 alias name WORKER_NAME
 
-select f.FIRST_NAME  from worker as f where f.FIRST_NAME='Praveen'; 	
+select f.FIRST_NAME from worker as f where f.FIRST_NAME='Praveen'; 	

@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Login - Result Analyzer</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+
+        .card {
+            background: #fff;
+            border-radius: 16px;
+            padding: 40px;
+            width: 100%;
+            max-width: 420px;
+            box-shadow: 0 15px 40px rgba(0,0,0,0.25);
+            text-align: center;
+        }
+
+        .card .icon {
+            font-size: 3rem;
+            margin-bottom: 10px;
+        }
+
+        .card h1 {
+            color: #333;
+            margin-bottom: 6px;
+            font-size: 1.7rem;
+        }
+
+        .card p.subtitle {
+            color: #888;
+            margin-bottom: 28px;
+            font-size: 0.92rem;
+        }
+
+        .form-group {
+            text-align: left;
+            margin-bottom: 18px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: 600;
+            color: #444;
+            font-size: 0.9rem;
+        }
+
+        .form-group input {
+            width: 100%;
+            padding: 12px 14px;
+            border: 2px solid #e0e0e0;
+            border-radius: 8px;
+            font-size: 1rem;
+            transition: border-color 0.3s;
+            outline: none;
+        }
+
+        .form-group input:focus {
+            border-color: #667eea;
+        }
+
+        .btn {
+            width: 100%;
+            padding: 13px;
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            color: #fff;
+            border: none;
+            border-radius: 10px;
+            font-size: 1.05rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: transform 0.2s, box-shadow 0.2s;
+            margin-top: 6px;
+        }
+
+        .btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(102,126,234,0.45);
+        }
+
+        .error-msg {
+            color: #e74c3c;
+            font-size: 0.88rem;
+            margin-top: 12px;
+            min-height: 20px;
+        }
+
+        .links {
+            margin-top: 22px;
+        }
+
+        .links a {
+            color: #667eea;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.92rem;
+        }
+
+        .links a:hover {
+            text-decoration: underline;
+        }
+
+        .divider {
+            display: flex;
+            align-items: center;
+            margin: 18px 0 14px;
+            color: #bbb;
+            font-size: 0.82rem;
+        }
+
+        .divider::before,
+        .divider::after {
+            content: '';
+            flex: 1;
+            border-top: 1px solid #eee;
+        }
+
+        .divider span {
+            padding: 0 10px;
+        }
+
+        /* Signup section */
+        .signup-section {
+            display: none;
+        }
+
+        .tab-toggle {
+            display: flex;
+            gap: 0;
+            margin-bottom: 24px;
+            border-radius: 8px;
+            overflow: hidden;
+            border: 2px solid #667eea;
+        }
+
+        .tab-toggle button {
+            flex: 1;
+            padding: 10px;
+            border: none;
+            background: #fff;
+            color: #667eea;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s;
+            font-size: 0.95rem;
+        }
+
+        .tab-toggle button.active {
+            background: #667eea;
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="card">
+        <div class="icon">🔐</div>
+        <h1>Student Portal</h1>
+        <p class="subtitle">Login or Register to view your results</p>
+
+        <!-- Tab Toggle -->
+        <div class="tab-toggle">
+            <button id="loginTab" class="active" onclick="showTab('login')">Login</button>
+            <button id="signupTab" onclick="showTab('signup')">Register</button>
+        </div>
+
+        <!-- Login Form -->
+        <form id="loginForm" autocomplete="off">
+            <div class="form-group">
+                <label for="loginId">Student ID</label>
+                <input type="text" id="loginId" placeholder="e.g. STU001" required>
+            </div>
+            <div class="form-group">
+                <label for="loginPass">Password</label>
+                <input type="password" id="loginPass" placeholder="Enter password" required>
+            </div>
+            <button type="submit" class="btn">Login</button>
+            <p class="error-msg" id="loginError"></p>
+        </form>
+
+        <!-- Signup Form -->
+        <form id="signupForm" class="signup-section" autocomplete="off">
+            <div class="form-group">
+                <label for="regId">Student ID</label>
+                <input type="text" id="regId" placeholder="e.g. STU001" required>
+            </div>
+            <div class="form-group">
+                <label for="regName">Full Name</label>
+                <input type="text" id="regName" placeholder="Your name" required>
+            </div>
+            <div class="form-group">
+                <label for="regPass">Password</label>
+                <input type="password" id="regPass" placeholder="Create password" required>
+            </div>
+            <div class="form-group">
+                <label for="regConfirm">Confirm Password</label>
+                <input type="password" id="regConfirm" placeholder="Confirm password" required>
+            </div>
+            <button type="submit" class="btn">Register</button>
+            <p class="error-msg" id="signupError"></p>
+        </form>
+
+        <div class="links">
+            <a href="forms.html">📝 Go to Marks Entry</a>
+        </div>
+    </div>
+
+    <script>
+        // ——— Tab switching ———
+        function showTab(tab) {
+            const loginForm  = document.getElementById('loginForm');
+            const signupForm = document.getElementById('signupForm');
+            const loginTab   = document.getElementById('loginTab');
+            const signupTab  = document.getElementById('signupTab');
+
+            if (tab === 'login') {
+                loginForm.style.display  = 'block';
+                signupForm.style.display = 'none';
+                loginTab.classList.add('active');
+                signupTab.classList.remove('active');
+            } else {
+                loginForm.style.display  = 'none';
+                signupForm.style.display = 'block';
+                signupTab.classList.add('active');
+                loginTab.classList.remove('active');
+            }
+            // Clear errors
+            document.getElementById('loginError').textContent  = '';
+            document.getElementById('signupError').textContent = '';
+        }
+
+        // ——— Registration ———
+        document.getElementById('signupForm').addEventListener('submit', function (e) {
+            e.preventDefault();
+            const errEl = document.getElementById('signupError');
+
+            const id      = document.getElementById('regId').value.trim();
+            const name    = document.getElementById('regName').value.trim();
+            const pass    = document.getElementById('regPass').value;
+            const confirm = document.getElementById('regConfirm').value;
+
+            if (!id || !name || !pass) {
+                errEl.textContent = 'All fields are required';
+                return;
+            }
+            if (pass !== confirm) {
+                errEl.textContent = 'Passwords do not match';
+                return;
+            }
+            if (pass.length < 4) {
+                errEl.textContent = 'Password must be at least 4 characters';
+                return;
+            }
+
+            let users = JSON.parse(localStorage.getItem('studentUsers') || '[]');
+            if (users.find(u => u.studentId === id)) {
+                errEl.textContent = 'Student ID already registered';
+                return;
+            }
+
+            users.push({ studentId: id, name: name, password: pass });
+            localStorage.setItem('studentUsers', JSON.stringify(users));
+
+            errEl.style.color = '#2ecc71';
+            errEl.textContent = 'Registered successfully! You can login now.';
+            this.reset();
+
+            setTimeout(() => {
+                errEl.style.color = '#e74c3c';
+                showTab('login');
+            }, 1500);
+        });
+
+        // ——— Login ———
+        document.getElementById('loginForm').addEventListener('submit', function (e) {
+            e.preventDefault();
+            const errEl = document.getElementById('loginError');
+
+            const id   = document.getElementById('loginId').value.trim();
+            const pass = document.getElementById('loginPass').value;
+
+            if (!id || !pass) {
+                errEl.textContent = 'Please fill in all fields';
+                return;
+            }
+
+            const users = JSON.parse(localStorage.getItem('studentUsers') || '[]');
+            const user  = users.find(u => u.studentId === id && u.password === pass);
+
+            if (!user) {
+                errEl.textContent = 'Invalid Student ID or Password';
+                return;
+            }
+
+            // Save session
+            sessionStorage.setItem('loggedInStudent', JSON.stringify(user));
+
+            // Redirect to analytics
+            window.location.href = 'analytics.html';
+        });
+    </script>
+
+</body>
+</html>

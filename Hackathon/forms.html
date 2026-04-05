@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enter Marks - Student Result Analyzer</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+
+        .card {
+            background: #fff;
+            border-radius: 16px;
+            padding: 35px 40px;
+            width: 100%;
+            max-width: 520px;
+            box-shadow: 0 15px 40px rgba(0,0,0,0.25);
+        }
+
+        .card h1 {
+            text-align: center;
+            color: #333;
+            margin-bottom: 6px;
+            font-size: 1.8rem;
+        }
+
+        .card p.subtitle {
+            text-align: center;
+            color: #777;
+            margin-bottom: 25px;
+            font-size: 0.95rem;
+        }
+
+        .form-group {
+            margin-bottom: 16px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: 600;
+            color: #444;
+            font-size: 0.92rem;
+        }
+
+        .form-group input,
+        .form-group select {
+            width: 100%;
+            padding: 10px 14px;
+            border: 2px solid #e0e0e0;
+            border-radius: 8px;
+            font-size: 1rem;
+            transition: border-color 0.3s;
+            outline: none;
+        }
+
+        .form-group input:focus,
+        .form-group select:focus {
+            border-color: #667eea;
+        }
+
+        .form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 14px;
+        }
+
+        .form-row .form-group {
+            margin-bottom: 0;
+        }
+
+        .exam-select {
+            margin-top: 8px;
+            margin-bottom: 20px;
+        }
+
+        .btn {
+            width: 100%;
+            padding: 13px;
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            color: #fff;
+            border: none;
+            border-radius: 10px;
+            font-size: 1.05rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(102,126,234,0.45);
+        }
+
+        .toast {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            padding: 14px 24px;
+            border-radius: 10px;
+            color: #fff;
+            font-weight: 600;
+            display: none;
+            z-index: 999;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+            animation: slideIn 0.4s ease;
+        }
+
+        .toast.success { background: #2ecc71; }
+        .toast.error   { background: #e74c3c; }
+
+        @keyframes slideIn {
+            from { transform: translateX(100%); opacity: 0; }
+            to   { transform: translateX(0);    opacity: 1; }
+        }
+
+        .links {
+            text-align: center;
+            margin-top: 18px;
+        }
+
+        .links a {
+            color: #667eea;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.92rem;
+        }
+
+        .links a:hover {
+            text-decoration: underline;
+        }
+
+        .divider {
+            border: none;
+            border-top: 1px solid #eee;
+            margin: 18px 0 14px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="toast" id="toast"></div>
+
+    <div class="card">
+        <h1>📝 Enter Marks</h1>
+        <p class="subtitle">Fill in the student details and subject marks</p>
+
+        <form id="marksForm" autocomplete="off">
+            <!-- Student Info -->
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="studentId">Student ID</label>
+                    <input type="text" id="studentId" placeholder="e.g. STU001" required>
+                </div>
+                <div class="form-group">
+                    <label for="studentName">Student Name</label>
+                    <input type="text" id="studentName" placeholder="Full Name" required>
+                </div>
+            </div>
+
+            <!-- Exam Type -->
+            <div class="form-group exam-select">
+                <label for="examType">Exam Type</label>
+                <select id="examType" required>
+                    <option value="" disabled selected>-- Select Exam --</option>
+                    <option value="Quarterly">Quarterly</option>
+                    <option value="Half-Yearly">Half-Yearly</option>
+                    <option value="Annual">Annual</option>
+                </select>
+            </div>
+
+            <hr class="divider">
+
+            <!-- Subject Marks -->
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="sub1">Tamil</label>
+                    <input type="number" id="sub1" min="0" max="100" placeholder="0 - 100" required>
+                </div>
+                <div class="form-group">
+                    <label for="sub2">English</label>
+                    <input type="number" id="sub2" min="0" max="100" placeholder="0 - 100" required>
+                </div>
+            </div>
+
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="sub3">Maths</label>
+                    <input type="number" id="sub3" min="0" max="100" placeholder="0 - 100" required>
+                </div>
+                <div class="form-group">
+                    <label for="sub4">Science</label>
+                    <input type="number" id="sub4" min="0" max="100" placeholder="0 - 100" required>
+                </div>
+            </div>
+
+            <div class="form-row" style="grid-template-columns: 1fr;">
+                <div class="form-group">
+                    <label for="sub5">Social Science</label>
+                    <input type="number" id="sub5" min="0" max="100" placeholder="0 - 100" required>
+                </div>
+            </div>
+
+            <br>
+            <button type="submit" class="btn">Submit Marks</button>
+        </form>
+
+        <div class="links">
+            <a href="student_login.html">🔑 Login to view Analytics</a>
+        </div>
+    </div>
+
+    <script>
+        // ——— Toast helper ———
+        function showToast(msg, type) {
+            const t = document.getElementById('toast');
+            t.textContent = msg;
+            t.className = 'toast ' + type;
+            t.style.display = 'block';
+            setTimeout(() => { t.style.display = 'none'; }, 3000);
+        }
+
+        // ——— Form submit ———
+        document.getElementById('marksForm').addEventListener('submit', function (e) {
+            e.preventDefault();
+
+            const studentId   = document.getElementById('studentId').value.trim();
+            const studentName = document.getElementById('studentName').value.trim();
+            const examType    = document.getElementById('examType').value;
+
+            const subjects = {
+                Tamil          : Number(document.getElementById('sub1').value),
+                English        : Number(document.getElementById('sub2').value),
+                Maths          : Number(document.getElementById('sub3').value),
+                Science        : Number(document.getElementById('sub4').value),
+                'Social Science': Number(document.getElementById('sub5').value)
+            };
+
+            // Validation
+            for (const [name, mark] of Object.entries(subjects)) {
+                if (mark < 0 || mark > 100) {
+                    showToast(name + ' mark must be between 0 and 100', 'error');
+                    return;
+                }
+            }
+
+            const total   = Object.values(subjects).reduce((a, b) => a + b, 0);
+            const average = (total / 5).toFixed(2);
+
+            const record = {
+                studentId,
+                studentName,
+                examType,
+                subjects,
+                total,
+                average: parseFloat(average),
+                date: new Date().toISOString()
+            };
+
+            // Save to localStorage
+            let records = JSON.parse(localStorage.getItem('studentMarks') || '[]');
+            records.push(record);
+            localStorage.setItem('studentMarks', JSON.stringify(records));
+
+            showToast('Marks saved successfully!', 'success');
+            this.reset();
+        });
+    </script>
+
+</body>
+</html>
